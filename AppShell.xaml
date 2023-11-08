@@ -3,12 +3,25 @@
     x:Class="TeleportMe.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:TeleportMe"
+	xmlns:page="clr-namespace:TeleportMe.Pages"
+	xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+	<TabBar android:TabbedPage.ToolbarPlacement="Bottom">
+		<Tab Title="Places">
+			<ShellContent ContentTemplate="{DataTemplate page:PlacePage}" Route="PlacePage"/>
+		</Tab>
+		<Tab Title="Events">
+			<ShellContent ContentTemplate="{DataTemplate page:EventPage}" Route="EventPage"/>
+		</Tab>
+		<Tab Title="Live">
+			<ShellContent ContentTemplate="{DataTemplate page:LivePage}" Route="LivePage"/>
+		</Tab>
+		<Tab Title="History">
+			<ShellContent ContentTemplate="{DataTemplate page:HistoryPage}" Route="HistoryPage"/>
+		</Tab>
+		<Tab Title="Friends">
+			<ShellContent ContentTemplate="{DataTemplate page:FriendPage}" Route="FriendPage"/>
+		</Tab>
+	</TabBar>
 </Shell>

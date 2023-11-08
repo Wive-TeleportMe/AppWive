@@ -1,4 +1,4 @@
-﻿namespace TeleportMe
+﻿namespace TeleportMe.Pages
 {
     public partial class MainPage : ContentPage
     {
