@@ -11,6 +11,14 @@
             HorizontalOptions="Center" />
 
         <Button
+            x:Name="testConnectionBtn"
+            Text="testConnection"
+            SemanticProperties.Hint="Counts the number of times you click"
+            Clicked="testConnection"
+            HorizontalOptions="Center" />
+        
+        
+        <Button
             x:Name="capturePhotoBtn"
             Text="Prendre une photo"
             SemanticProperties.Hint="Counts the number of times you click"

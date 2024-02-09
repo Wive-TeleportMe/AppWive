@@ -1,11 +1,21 @@
 namespace TeleportMe.Pages;
 
+using TeleportMe.Controllers;
+using static TeleportMe.Controllers.Connexion;
+
 public partial class LivePage : ContentPage
 {
+
 	public LivePage()
 	{
 		InitializeComponent();
 	}
+
+    private void testConnection(Object sender, EventArgs e)
+    {
+        Connexion aaa = new Connexion();
+        testConnectionBtn.Text = Connexion.testConnexion(1).ToString();
+    }
 
     // PHOTO PRISE SUR LE MOMENT AVEC L'APPLI PHOTO
     private async void capturePhoto(Object sender, EventArgs e)
@@ -54,6 +64,7 @@ public partial class LivePage : ContentPage
     // VIDEO PRISE SUR LE MOMENT AVEC L'APPLI PHOTO
     private async void captureVideo(Object sender, EventArgs e)
     {
+     
         if (MediaPicker.Default.IsCaptureSupported)
         {
             // POUR UNE IMAGE :
